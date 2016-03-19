@@ -66,13 +66,54 @@ public class VarastoTest {
     }
 
     @Test
+    public void eiVoidaLisataNegatiivistaMaaraaVarastoon() {
+        varasto.lisaaVarastoon(-6);
+        assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
+    }
+
+    @Test
+    public void oikeaLisaysOnnistuu() {
+        varasto.lisaaVarastoon(4);
+        assertEquals(4, varasto.getSaldo(), vertailuTarkkuus);
+    }
+
+    @Test
+    public void lisataanLiikaaVarastoMeneeTayteen() {
+        varasto.lisaaVarastoon(1000);
+        assertEquals(10, varasto.getSaldo(), vertailuTarkkuus);
+    }
+
+    @Test
+    public void yritetaanOttaaNegatiivistaArvoaVarastosta() {
+        double otto = varasto.otaVarastosta(-6);
+        assertEquals(0, otto, vertailuTarkkuus);
+        assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
+    }
+
+    @Test
+    public void otetaanVarstostaEnemmanKuinSaldo() {
+        varasto.lisaaVarastoon(10);
+        double otto = varasto.otaVarastosta(1000);
+        assertEquals(10, otto, vertailuTarkkuus);
+        assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
+    }
+
+    @Test
+    public void otaVarastostaJaVahennaSaldoaOikein() {
+        varasto.lisaaVarastoon(10);
+        double otto = varasto.otaVarastosta(6);
+        assertEquals(6, otto, vertailuTarkkuus);
+        assertEquals(4, varasto.getSaldo(), vertailuTarkkuus);
+    }
+
+    @Test
     public void konstr() {
         varasto = new Varasto(-1);
         varasto = new Varasto(0);
-        varasto = new Varasto(1,1);
-        varasto = new Varasto(1,2);
-        varasto = new Varasto(-1,2);
-        varasto = new Varasto(-1,-1);
+        varasto = new Varasto(1, 1);
+        varasto = new Varasto(1, 2);
+        varasto = new Varasto(-1, 2);
+        varasto = new Varasto(-1, -1);
         varasto.toString();
     }
 }
