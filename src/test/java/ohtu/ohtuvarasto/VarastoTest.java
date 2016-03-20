@@ -103,7 +103,7 @@ public class VarastoTest {
         varasto.lisaaVarastoon(10);
         double otto = varasto.otaVarastosta(6);
         assertEquals(6, otto, vertailuTarkkuus);
-        assertEquals(4, varasto.getSaldo(), vertailuTarkkuus);
+        assertEquals(6, varasto.getSaldo(), vertailuTarkkuus);
     }
 
     @Test
