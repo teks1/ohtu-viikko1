@@ -6,8 +6,6 @@
 </file>
 <file name="/home/marko/ohtu/ohtu-viikko3/src/main/java/ohtu/services/AuthenticationService.java">
 <error line="20" column="5" severity="error" message="Cyclomatic Complexity is 4 (max allowed is 3)." source="com.puppycrawl.tools.checkstyle.checks.metrics.CyclomaticComplexityCheck"/>
-<error line="45" column="5" severity="error" message="Cyclomatic Complexity is 7 (max allowed is 3)." source="com.puppycrawl.tools.checkstyle.checks.metrics.CyclomaticComplexityCheck"/>
-<error line="45" column="5" severity="error" message="Method length is 12 lines (max allowed is 10)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
 </file>
 <file name="/home/marko/ohtu/ohtu-viikko3/src/main/java/ohtu/data_access/UserDao.java">
 </file>

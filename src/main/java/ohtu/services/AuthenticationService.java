@@ -44,16 +44,21 @@ public class AuthenticationService {
 
     private boolean invalid(String username, String password) {
 
-        if (password.length() < 8 || username.length() < 3) {
+        if (checkPassword(password)) {
             return true;
         }
-        if (!password.matches("(.*)(\\d+)(.*)") && !password.matches("(.*)(\\W+)(.*)")) {
-            return true;
-        }
-        if (username.matches("(.*)(\\d+)(.*)") || username.matches("(.*)(\\W+)(.*)")) {
+        if (checkUsername(username)) {
             return true;
         }
 
         return false;
+    }
+
+    private boolean checkPassword(String password) {
+        return (password.length() < 8 || !password.matches("(.*)(\\d+)(.*)") && !password.matches("(.*)(\\W+)(.*)"));
+    }
+
+    private boolean checkUsername(String username) {
+        return (username.length() < 3 || username.matches("(.*)(\\d+)(.*)") || username.matches("(.*)(\\W+)(.*)"));
     }
 }

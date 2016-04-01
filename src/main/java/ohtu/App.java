@@ -36,13 +36,11 @@ public class App {
 
     public boolean getCommand() {
         String command = io.readLine(">");
-
         if (command.isEmpty()) {
             return false;
         } else {
             runCommand(command);
         }
-
         return true;
     }
 
