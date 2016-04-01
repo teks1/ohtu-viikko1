@@ -26,9 +26,10 @@ public class AuthenticationService {
 
         return false;
     }
-    private boolean logInCheck(User user, String username, String password){
+
+    private boolean logInCheck(User user, String username, String password) {
         return (user.getUsername().equals(username)
-                    && user.getPassword().equals(password));
+                && user.getPassword().equals(password));
     }
 
     public boolean createUser(String username, String password) {
@@ -48,7 +49,7 @@ public class AuthenticationService {
     private boolean invalid(String username, String password) {
 
         if (checkPassword(password)) {
-            return false;
+            return true;
         }
         if (checkUsername(username)) {
             return true;
