@@ -30,30 +30,45 @@ public class App {
     }
 
     public void run() {
-        while (true) {
-            String command = io.readLine(">");
+        while (getCommand()) {
+        }
+    }
 
-            if (command.isEmpty()) {
-                break;
-            }
+    public boolean getCommand() {
+        String command = io.readLine(">");
 
-            if (command.equals("new")) {
-                String[] usernameAndPasword = ask();
-                if (auth.createUser(usernameAndPasword[0], usernameAndPasword[1])) {
-                    io.print("new user registered");
-                } else {
-                    io.print("new user not registered");
-                }
+        if (command.isEmpty()) {
+            return false;
+        } else {
+            runCommand(command);
+        }
 
-            } else if (command.equals("login")) {
-                String[] usernameAndPasword = ask();
-                if (auth.logIn(usernameAndPasword[0], usernameAndPasword[1])) {
-                    io.print("logged in");
-                } else {
-                    io.print("wrong username or password");
-                }
-            }
+        return true;
+    }
 
+    public void runCommand(String command) {
+        if (command.equals("new")) {
+            runCommandNew();
+        } else if (command.equals("login")) {
+            runCommandLogin();
+        }
+    }
+
+    public void runCommandNew() {
+        String[] usernameAndPasword = ask();
+        if (auth.createUser(usernameAndPasword[0], usernameAndPasword[1])) {
+            io.print("new user registered");
+        } else {
+            io.print("new user not registered");
+        }
+    }
+
+    public void runCommandLogin() {
+        String[] usernameAndPasword = ask();
+        if (auth.logIn(usernameAndPasword[0], usernameAndPasword[1])) {
+            io.print("logged in");
+        } else {
+            io.print("wrong username or password");
         }
     }
 
@@ -62,7 +77,7 @@ public class App {
 //        IO io = new ConsoleIO();
 //        AuthenticationService auth = new AuthenticationService(dao);
 //        new App(io, auth).run();
-        
+
         ApplicationContext ctx = new FileSystemXmlApplicationContext("src/main/resources/spring-context.xml");
 
         App application = ctx.getBean(App.class);
