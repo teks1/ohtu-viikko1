@@ -48,7 +48,7 @@ public class AuthenticationService {
     private boolean invalid(String username, String password) {
 
         if (checkPassword(password)) {
-            return true;
+            return false;
         }
         if (checkUsername(username)) {
             return true;
