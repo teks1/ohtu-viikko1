@@ -87,7 +87,7 @@ public class App {
     //
     // UserDao dao = new InMemoryUserDao();  
     // StubIO io = new StubIO("new", "eero", "sala1nen" );   
-    //  AuthenticationService auth = new AuthenticationService(dao);
+    // AuthenticationService auth = new AuthenticationService(dao);
     // new App(io, auth).run();
     // System.out.println(io.getPrints());
 }

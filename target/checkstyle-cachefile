@@ -1,10 +1,10 @@
-#Sat Apr 02 00:54:51 EEST 2016
+#Sat Apr 09 16:01:06 EEST 2016
 /home/marko/ohtu/ohtu-viikko3/src/main/java/ohtu/domain/User.java=1459523756000
-/home/marko/ohtu/ohtu-viikko3/src/main/java/ohtu/App.java=1459546549000
+/home/marko/ohtu/ohtu-viikko3/src/main/java/ohtu/App.java=1460202995000
 /home/marko/ohtu/ohtu-viikko3/src/main/java/ohtu/io/IO.java=1459523756000
 /home/marko/ohtu/ohtu-viikko3/src/main/java/ohtu/io/StubIO.java=1459523756000
 /home/marko/ohtu/ohtu-viikko3/src/main/java/ohtu/io/ConsoleIO.java=1459542182000
 /home/marko/ohtu/ohtu-viikko3/src/main/java/ohtu/services/AuthenticationService.java=1459547674000
 /home/marko/ohtu/ohtu-viikko3/src/main/java/ohtu/data_access/UserDao.java=1459523756000
-/home/marko/ohtu/ohtu-viikko3/src/main/java/ohtu/data_access/InMemoryUserDao.java=1459542105000
+/home/marko/ohtu/ohtu-viikko3/src/main/java/ohtu/data_access/InMemoryUserDao.java=1460205483000
 configuration*?=DFCB5E24E14D000F79B3F86F6EAEBBE0B6B68442
