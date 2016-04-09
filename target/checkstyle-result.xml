@@ -11,7 +11,6 @@
 <file name="/home/marko/ohtu/ohtu-viikko3/src/main/java/ohtu/data_access/InMemoryUserDao.java">
 </file>
 <file name="/home/marko/ohtu/ohtu-viikko3/src/main/java/ohtu/data_access/FileUserDAO.java">
-<error line="40" column="5" severity="error" message="Method length is 11 lines (max allowed is 10)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
 </file>
 <file name="/home/marko/ohtu/ohtu-viikko3/src/main/java/ohtu/io/ConsoleIO.java">
 </file>
